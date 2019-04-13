@@ -1,0 +1,17 @@
+
+
+
+####
+
+How to disable KDEwallet ? 
+
+1. # vim ~/.config/kwalletrc 
+
+Enter the following texts:
+
+[Wallet]
+Enabled=false
+
+2. restart Plasma
+
+####
