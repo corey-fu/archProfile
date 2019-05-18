@@ -1,33 +1,24 @@
-#
-#GNOME settings
-#
-#export GDK_BACKEND=x11
-#exec gnome-session
-#
-#ICEWM settings
-#
-#exec icewm
-#
-#i3WM settings  
-#
-#exec i3
-#
+#!/bin/bash
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-#export LANG=en_US.UTF-8
-#export LANG=ja_JP.UTF-8
-export LANG=zh_TW.UTF-8
-export LC_CTYPE=zh_TW.UTF-8
-#export LC_ALL=C
+# Setting language environment
+export LANG="zh_TW.UTF-8"
+export LC_CTYPE="zh_TW.UTF-8"
+export LC_ALL="zh_TW.UTF-8"
 
+# Setting gcin 
 export XMODIFIERS="@im=gcin"
 export GTK_IM_MODULE="gcin"
 export QT_IM_MODULE="gcin"
 gcin &
 
-#export XMODIFIERS=@im=fcitx
-#export GTK_IM_MODULE=fcitx
-#export QT_IM_MODULE=fcitx
+# Setting background-image
+hsetroot -full "/home/coreyfu/wallpaper/lanmewko-11.png"
+#icewmbg &
 
-exec startkde
+# Start a de or wm
+#exec startkde
+exec i3
+#exec icewm
+#exec qtile
